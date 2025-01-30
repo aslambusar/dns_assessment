@@ -8,7 +8,7 @@ const menuRoutes = require('./routes/menuRoutes');
 connectDB();
 const app = express();
 
-//const frontendUrl = "http://localhost:5000";
+
 const frontendUrl = "https://dnsbackend.onrender.com";
 
 // const corsOptions = {
