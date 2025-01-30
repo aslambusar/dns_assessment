@@ -11,7 +11,7 @@ const MenuList = () => {
   useEffect(() => {
     const fetchMenus = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/menus");
+        const response = await axios.get("https://dnsbackend.onrender.com/api/menus");
         console.log("Menus response:", response.data); 
         setMenus(response.data); 
       } catch (error) {
@@ -29,7 +29,7 @@ const MenuList = () => {
         if (selectedMenu) {
           try {
             const response = await axios.get(
-              ` http://localhost:5000/api/menus/${selectedMenu._id}/items`
+              ` https://dnsbackend.onrender.com/api/menus/${selectedMenu._id}/items`
             );
             console.log("Fetched items:", response.data);
             setMenuItems(response.data); 
