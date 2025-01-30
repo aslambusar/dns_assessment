@@ -17,7 +17,7 @@ const frontendUrl = "https://dnsbackend.onrender.com";
 //   allowedHeaders: ['Content-Type'],
 // };
 const corsOptions = {
-  origin: "https://dns-frontend-kz1o.onrender.com", 
+  origin: "https://dns-assessment-frontend4.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
 };
