@@ -9,7 +9,7 @@ connectDB();
 const app = express();
 
 //const frontendUrl = "http://localhost:5000";
-const frontendUrl = "https://dns-frontend-kz1o.onrender.com";
+const frontendUrl = "https://dnsbackend.onrender.com";
 
 // const corsOptions = {
 //   origin: frontendUrl,
@@ -17,7 +17,7 @@ const frontendUrl = "https://dns-frontend-kz1o.onrender.com";
 //   allowedHeaders: ['Content-Type'],
 // };
 const corsOptions = {
-  origin: "http://localhost:5173", 
+  origin: "https://dns-frontend-kz1o.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
 };
