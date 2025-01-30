@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const api = axios.create({
   //baseURL: 'http://localhost:5000/api', 
-  baseURL: 'https://dns-frontend-kz1o.onrender.com', 
+  baseURL: 'https://dns-assessment-frontend4.onrender.com', 
 
 });
 
