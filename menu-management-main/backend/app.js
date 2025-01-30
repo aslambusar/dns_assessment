@@ -9,7 +9,7 @@ connectDB();
 const app = express();
 
 
-const frontendUrl = "https://dnsbackend.onrender.com";
+const frontendUrl = "https://dns-assessment-backend1.onrender.com";
 
 // const corsOptions = {
 //   origin: frontendUrl,
