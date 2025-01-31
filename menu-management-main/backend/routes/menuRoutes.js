@@ -3,16 +3,34 @@ const Menu = require('../models/Menu');
 const MenuItem = require('../models/MenuItem');
 const router = express.Router();
 
+// router.post('/menus', async (req, res) => {
+//     console.log('Request Body:', req.body);
+//     const { name, description } = req.body;
+//     if (!name || !description) {
+//         return res.status(400).json({ error: 'Name and description are required' });
+//     }
+//     try {
+//         const menu = new Menu({ name, description });
+//         await menu.save();
+//         res.status(201).json(menu);
+//     } catch (error) {
+//         console.error('Error saving menu to database:', error);
+//         res.status(500).json({ error: 'Error creating menu' });
+//     }
+// });
 router.post('/menus', async (req, res) => {
-    console.log('Request Body:', req.body);
+    console.log('Received Create Menu Request:', req.body);
     const { name, description } = req.body;
+    
     if (!name || !description) {
         return res.status(400).json({ error: 'Name and description are required' });
     }
+    
     try {
         const menu = new Menu({ name, description });
-        await menu.save();
-        res.status(201).json(menu);
+        const savedMenu = await menu.save();
+        console.log('Menu Saved:', savedMenu);
+        res.status(201).json(savedMenu);
     } catch (error) {
         console.error('Error saving menu to database:', error);
         res.status(500).json({ error: 'Error creating menu' });
